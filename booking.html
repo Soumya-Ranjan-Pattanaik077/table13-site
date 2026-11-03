@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reserve a seat — Table13</title>
+<meta name="description" content="Reserve and prepay a seat at Table13, Volume 03 — Northeast India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="wrap">
+  <div class="nav">
+    <a href="index.html" style="color:var(--cream-dim);font-size:14px">&larr; Back</a>
+    <div class="logo">Table<b>13</b></div>
+    <div class="muted">Secure checkout</div>
+  </div>
+</header>
+
+<main class="wrap checkout">
+
+  <!-- LEFT -->
+  <section class="event">
+    <figure class="clip" style="margin:0 0 28px">
+      <video autoplay muted loop playsinline poster="videos/northeast-poster.jpg">
+        <source src="videos/northeast.mp4" type="video/mp4">
+      </video>
+      <div class="layer glowA"></div>
+      <div class="layer glowB"></div>
+      <div class="layer">
+        <span class="ember" style="left:16%;width:4px;height:4px;animation-duration:7s;animation-delay:.3s"></span>
+        <span class="ember" style="left:34%;width:3px;height:3px;animation-duration:8.5s;animation-delay:1.7s"></span>
+        <span class="ember" style="left:52%;width:5px;height:5px;animation-duration:6.5s;animation-delay:1s"></span>
+        <span class="ember" style="left:70%;width:3px;height:3px;animation-duration:9s;animation-delay:2.6s"></span>
+        <span class="ember" style="left:85%;width:4px;height:4px;animation-duration:7.8s;animation-delay:.8s"></span>
+      </div>
+      <div class="layer vignette"></div>
+      <div class="caption">Volume 03 · the film</div>
+    </figure>
+
+    <div class="eyebrow" style="color:var(--accent);margin-bottom:12px">Volume 03 · one sitting</div>
+    <h1>Northeast India</h1>
+
+    <div class="facts">
+      <span>🗓 <strong>[DATE]</strong>, 7:30 pm</span>
+      <span>📍 <strong>South Kolkata</strong> — address on confirmation</span>
+      <span>🍽 <strong>7 courses</strong>, ~3 hours</span>
+    </div>
+
+    <p style="font-size:17px;color:var(--cream-dim);margin:0 0 32px;max-width:54ch;text-wrap:pretty">The menu you asked for most. Seven courses across the Seven Sisters — smoked bamboo shoot, fermented soybean, Naga heat and river fish, closing on a black-rice dessert. Fourteen seats, one long table, one unrepeatable night.</p>
+
+    <h2 class="serif" style="font-size:22px;margin:0 0 16px">The menu</h2>
+    <ol class="menu">
+      <li><b>01</b><div><strong>Jadoh &amp; smoked pork</strong><small>Khasi rice, black sesame</small></div></li>
+      <li><b>02</b><div><strong>Axone &amp; river fish</strong><small>Fermented soybean, banana leaf</small></div></li>
+      <li><b>03</b><div><strong>Bamboo shoot &amp; Naga heat</strong><small>Raja chilli, mustard greens</small></div></li>
+      <li style="color:var(--cream-faint);font-size:14px"><b style="color:var(--cream-faint)">··</b><div>+ four more courses, revealed at the table</div></li>
+    </ol>
+  </section>
+
+  <!-- RIGHT -->
+  <aside class="order">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:4px">
+      <span class="serif" style="font-size:20px">Reserve your seat</span>
+      <span style="font-size:13px;color:var(--accent)" id="seatsLeft">6 of 14 left</span>
+    </div>
+    <p style="margin:0 0 20px;font-size:13px;color:var(--cream-faint)">Seats are prepaid and non-transferable. Indicative rates — set your own.</p>
+
+    <fieldset style="border:none;padding:0;margin:0 0 22px">
+      <legend style="font-size:13px;color:rgba(246,238,224,.7);margin-bottom:8px;padding:0">Choose your table</legend>
+      <button type="button" class="tier sel" data-tier="seat">
+        <span class="label"><span style="font-weight:600;font-size:15px">A seat</span><span style="font-size:13px;color:var(--cream-faint)">All seven courses</span></span>
+        <span class="price">&#8377;4,500</span>
+      </button>
+      <button type="button" class="tier" data-tier="pairing">
+        <span class="label"><span style="font-weight:600;font-size:15px">Seat + pairing</span><span style="font-size:13px;color:var(--cream-faint)">Courses with a matched pour each</span></span>
+        <span class="price">&#8377;6,200</span>
+      </button>
+    </fieldset>
+
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:22px">
+      <span style="font-size:14px;color:var(--cream-dim)">Seats</span>
+      <div class="stepper">
+        <button type="button" id="dec" aria-label="One fewer seat">&minus;</button>
+        <span id="qty" style="min-width:40px;text-align:center;font-size:17px;font-weight:600">2</span>
+        <button type="button" id="inc" aria-label="One more seat">+</button>
+      </div>
+    </div>
+
+    <div class="summary">
+      <div class="r"><span id="sumLine">A seat × 2</span><span id="sub">&#8377;9,000</span></div>
+      <div class="r"><span>GST &amp; fees</span><span>included</span></div>
+      <div class="r total"><span>Total</span><span><b id="total">&#8377;9,000</b></span></div>
+    </div>
+
+    <div class="methods">
+      <button type="button" class="sel" data-method="upi">UPI</button>
+      <button type="button" data-method="card">Card</button>
+      <button type="button" data-method="wa">WhatsApp link</button>
+    </div>
+
+    <div id="payBlock">
+      <button type="button" class="pay" id="payBtn">Pay &#8377;9,000 by UPI</button>
+      <div class="razor"><span>Powered by</span><b>Razorpay</b><span>· UPI · Cards · Wallets</span></div>
+    </div>
+    <div class="confirmed" id="confirmed">
+      <div class="tick" style="margin:0 auto 12px"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13 L10 18 L19 6" fill="none" stroke="#1A1206" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+      <div class="serif" style="font-size:20px;margin-bottom:4px">Seat confirmed.</div>
+      <p style="margin:0;font-size:13px;color:var(--cream-faint)">A receipt and the address are on their way to WhatsApp. See you at the table.</p>
+    </div>
+  </aside>
+
+</main>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
